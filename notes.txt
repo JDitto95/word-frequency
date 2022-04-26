@@ -1,0 +1,20 @@
+CREATE AN INTERACTIVE PROGRAM-Mystery Work
+
+1.Read from a file.
+
+2.Choose a random value.
+
+3.keep track of state.
+
+# ask user to guess one letter
+# Ask user to guess one letter
+# Tell the user if the guess is in the word
+# computer read file
+# start with test_word.txt (one word)
+# tell user how many letters word has
+
+create a way to keep track of guesses that are made. using a list[] 
+
+
+# Display partially guessed word like in Wheel of Fortune
+# game ends when player guesses word
