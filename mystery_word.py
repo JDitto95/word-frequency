@@ -23,17 +23,23 @@ def play_game():
                 if letter in guesses:
                     print(letter, end='')
                 elif letter not in guesses:
-                    print('*', end='')
+                    print('_', end='')
                     
             
             
             # if len(answer) > 1:  
             #     print("You can't do that!!")
             if answer in random_word:
+                count = count-1
                 print("\nYour guess is correct!!")
             if answer not in random_word:
+                count = count-1
                 print("\nincorrect")
-            
+        
+        while count == 0:
+            exit()
+        
+        
 '''if guesses are in the word then keep track of guesses''' # I dont know what I am trying to do.
 #for letter in range(8):
     
