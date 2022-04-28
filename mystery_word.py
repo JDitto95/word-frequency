@@ -1,6 +1,6 @@
 import random
 def play_game():
-    with open("test-word.txt") as test_word:
+    with open("words.txt") as test_word:
         words = test_word.read()
         test_word = list(map(str, words.split()))
         random_word = random.choice(test_word)
@@ -14,30 +14,34 @@ def play_game():
             print("Thank you, come again!")
             exit()
         count = 8
+        print(random_word)
         #letter_placement = len(random_word) * "_"
-        guesses = ' '
+        guesses = []
         while count > 0:
-            answer = input("\nplease only input one letter per spot ").casefold()
+            answer = input("\nplease  input one letter per spot ").casefold()
+            w = 0
             guesses += answer    
             for letter in random_word:   # loop for keeping track of guesses
                 if letter in guesses:
                     print(letter, end='')
-                elif letter not in guesses:
+                else :
                     print('_', end='')
-                    
+                    w+=1
             
-            
+            if w == 0:
+                print("\nCONGRATULATIONS!! YOU WIN!!\nThe Mystery Word was " + random_word + "and was solved in " + str(count ))
+                exit()
             # if len(answer) > 1:  
             #     print("You can't do that!!")
             if answer in random_word:
-                count = count-1
-                print("\nYour guess is correct!!")
+                print("\nYour guess is correct!!", count ,'wrong guesses left')
             if answer not in random_word:
                 count = count-1
-                print("\nincorrect")
-        
-        while count == 0:
-            exit()
+                print("\nincorrect", count, 'wrong guesses left')
+        if count == 0:
+            print('GAME OVER, AMIGO')
+        # while count == 0:     
+        #exit()
         
         
 '''if guesses are in the word then keep track of guesses''' # I dont know what I am trying to do.
