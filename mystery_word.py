@@ -6,9 +6,9 @@ def play_game():
         random_word = random.choice(test_word)
         # Add user input
         # what line of code would help me tell the user how many turns they have to guess the word?
-        intro = input("would you like to play a game? y/n ").lower()
+        intro = input("would you like to play a game?  Y/N ").lower().upper()
         if intro == "y":
-            intro2 = input("which level would you like to play? 1,2,3 ")
+            #intro2 = input("which level would you like to play? 1,2,3 ")
             print("\nYour word is", len(random_word),"letters")
         if intro == "n":
             print("Thank you, come again!")
@@ -19,17 +19,17 @@ def play_game():
         guesses = []
         while count > 0:
             answer = input("\nplease  input one letter per spot ").casefold()
-            w = 0
+            blank_spaces = 0
             guesses += answer    
             for letter in random_word:   # loop for keeping track of guesses
                 if letter in guesses:
                     print(letter, end='')
                 else :
                     print('_', end='')
-                    w+=1
+                    blank_spaces+=1
             
-            if w == 0:
-                print("\nCONGRATULATIONS!! YOU WIN!!\nThe Mystery Word was " + random_word + "and was solved in " + str(count ))
+            if blank_spaces == 0:
+                print("\nCONGRATULATIONS!! YOU WIN!!\nThe Mystery Word was "  +  random_word  + "and was solved in " + str(count ))
                 exit()
             # if len(answer) > 1:  
             #     print("You can't do that!!")

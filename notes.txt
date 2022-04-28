@@ -1,4 +1,4 @@
-CREATE AN INTERACTIVE PROGRAM-Mystery Work
+CREATE AN INTERACTIVE PROGRAM-Mystery Word
 # tasks that have been completed
 -ask user to guess one letter
 - Ask user to guess one letter
@@ -9,11 +9,10 @@ CREATE AN INTERACTIVE PROGRAM-Mystery Work
 - Display partially guessed word like in Wheel of Fortune
 -Read from a file.
 -Chooses a random word.
+-Create a way to keep track of guesses that are made. using a list[] 
+-Game ends when player guesses word
 
 3.keep track of state.
 
 
-create a way to keep track of guesses that are made. using a list[] 
 # Tasks that still need to be completed
-
-# game ends when player guesses word
